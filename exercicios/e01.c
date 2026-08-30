@@ -14,7 +14,7 @@ int main() {
 	scanf("%d", &lado3);
 	
 	// Verificação
-	if ((lado1 + lado2) > lado3 || (lado1 + lado3) > lado2 || (lado2 + lado3) > lado1) {
+	if ((lado1 + lado2) > lado3 && (lado1 + lado3) > lado2 && (lado2 + lado3) > lado1) {
 		if ((lado1 && lado2 && lado3) >=0) {
 			if (lado1 == lado2 && lado2 == lado3) {
 			printf("O Triangulo Equilatero!"); 
@@ -38,7 +38,7 @@ int main() {
 
 	else {
 
-		printf("Não forma um triangulo.");
+		printf("Nao forma um triangulo.");
 	}
 
 	return 0;
