@@ -20,7 +20,7 @@ int main() {
 	scanf("%d", &operacao);
 
 	if ((a < 0) || (b < 0)) {
-		printf("Os valores precisam ser positivos")
+		printf("Os valores precisam ser positivos");
 		return 0;
 	}
 
@@ -28,19 +28,28 @@ int main() {
 	switch(operacao) {
 
 		case 1:
+			printf("%d", a & b);
+			break
 
 		case 2:
+			printf("%d", a | b);
+			break
 
 		case 3:
+			printf("%d", a ^ b);
+			break
 
 		case 4:
+			printf("%d", a << b);
+			break
 
 		case 5:
+			printf("%d",a >> b);
+			break
 
 		default:
-
-
-
+			printf("Opcao invalida");
+			break
 
 	}
 
