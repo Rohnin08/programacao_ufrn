@@ -8,8 +8,10 @@ int main() {
 	printf(".............Digite um numero: ");
 	scanf("%d", &N);
 
-	for (int i = 1; i <= N;i++) {
-		fatorial = N * (N-i);
+	for (int i = 1; i <= N; i++) {
+		N
+
+		N += n-1
 	}
 
 	printf("%d", fatorial);

@@ -2,7 +2,7 @@
 
 int main() {
 
-	int operacao, a, b;
+	int opcao, a, b, resultado;
 
 	printf("1 - E bit a bit (&)");
 	printf("2 - OU bit a bit (|)");
@@ -17,7 +17,7 @@ int main() {
 	scanf("%d", &b);
 	
 	printf("Digite a operacao: ");
-	scanf("%d", &operacao);
+	scanf("%d", &opcao);
 
 	if ((a < 0) || (b < 0)) {
 		printf("Os valores precisam ser positivos");
@@ -25,26 +25,31 @@ int main() {
 	}
 
 
-	switch(operacao) {
+	switch(opcao) {
 
 		case 1:
-			printf("%d", a & b);
-			break
+			resultado = a & b;
+			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+			break;
 
 		case 2:
-			printf("%d", a | b);
-			break
+			resultado = a | b;
+			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+			break;
 
 		case 3:
-			printf("%d", a ^ b);
-			break
+			resultado = a ^ b;
+			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+			break;
 
 		case 4:
-			printf("%d", a << b);
-			break
+			resultado = a << b;
+			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+			break;
 
 		case 5:
-			printf("%d",a >> b);
+			resultado = a >> b;
+			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
 			break
 
 		default:
