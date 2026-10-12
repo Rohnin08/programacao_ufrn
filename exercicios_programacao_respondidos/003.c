@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-void parsearLinhaCSV(char linha[]) {
+void parsearLinhaCSV(char linha[])
+{
     char *campo;
 
     campo = strtok(linha, ";");
@@ -18,7 +19,8 @@ void parsearLinhaCSV(char linha[]) {
     printf("Cargo: %s\n", campo);
 }
 
-int main(void) {
+int main(void)
+{
     char linha[] = "Carlos Eduardo;34;9500.00;Desenvolvedor";
 
     printf("Linha bruta recebida: %s\n\n", linha);

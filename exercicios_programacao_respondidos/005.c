@@ -2,16 +2,19 @@
 #include <stdio.h>
 #include <stdint.h>
 
-union CacheVal {
+union CacheVal
+{
     uint32_t contadorAcessos;
     float percentualUso;
 };
 
-void atualizarCacheParaFloat(union CacheVal *cache, float valor) {
+void atualizarCacheParaFloat(union CacheVal *cache, float valor)
+{
     cache->percentualUso = valor;
 }
 
-int main(void) {
+int main(void)
+{
     union CacheVal cache;
 
     cache.contadorAcessos = 15000;

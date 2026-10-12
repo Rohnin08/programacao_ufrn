@@ -1,20 +1,24 @@
 
 #include <stdio.h>
 
-struct ClienteSaaS {
+struct ClienteSaaS
+{
     int id;
     int limiteMensal;
     int requisicoesConsumidas;
     int bloqueado;
 };
 
-void verificarQuota(struct ClienteSaaS *cliente) {
-    if (cliente->requisicoesConsumidas > cliente->limiteMensal) {
+void verificarQuota(struct ClienteSaaS *cliente)
+{
+    if (cliente->requisicoesConsumidas > cliente->limiteMensal)
+    {
         cliente->bloqueado = 1;
     }
 }
 
-int main(void) {
+int main(void)
+{
     struct ClienteSaaS cliente = {1, 10000, 10500, 0};
 
     printf("=== DADOS DO CLIENTE ===\n");
@@ -26,9 +30,12 @@ int main(void) {
 
     printf("\n=== STATUS DO ACESSO ===\n");
 
-    if (cliente.bloqueado == 1) {
+    if (cliente.bloqueado == 1)
+    {
         printf("Acesso suspenso: limite mensal excedido.\n");
-    } else {
+    }
+    else
+    {
         printf("Acesso liberado.\n");
     }
 

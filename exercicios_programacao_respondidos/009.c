@@ -1,11 +1,13 @@
 
 #include <stdio.h>
 
-long long calcularFaturamentoTotal(int quantidade, int precoUnitario) {
-    return (long long) quantidade * precoUnitario;
+long long calcularFaturamentoTotal(int quantidade, int precoUnitario)
+{
+    return (long long)quantidade * precoUnitario;
 }
 
-int main(void) {
+int main(void)
+{
     int quantidade = 500000;
     int precoUnitario = 1000;
 

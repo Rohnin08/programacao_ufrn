@@ -1,28 +1,32 @@
 
 #include <stdio.h>
 
-enum StatusJob {
+enum StatusJob
+{
     QUEUED,
     PROCESSING,
     COMPLETED,
     FAILED
 };
 
-void executarJob(enum StatusJob *jobStatus) {
+void executarJob(enum StatusJob *jobStatus)
+{
     *jobStatus = PROCESSING;
     printf("Job em processamento...\n");
 
     *jobStatus = COMPLETED;
 }
 
-int main(void) {
+int main(void)
+{
     enum StatusJob jobStatus = QUEUED;
 
     printf("Status inicial da fila: QUEUED\n");
 
     executarJob(&jobStatus);
 
-    if (jobStatus == COMPLETED) {
+    if (jobStatus == COMPLETED)
+    {
         printf("Job concluido com sucesso!\n");
     }
 

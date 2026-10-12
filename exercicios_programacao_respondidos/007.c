@@ -3,37 +3,44 @@
 
 typedef int (*MiddlewareHandler)(int requestId);
 
-int autenticar(int requestId) {
+int autenticar(int requestId)
+{
     printf("Autenticando requisicao %d...\n", requestId);
     return 1;
 }
 
-int logar(int requestId) {
+int logar(int requestId)
+{
     printf("Registrando requisicao %d no log...\n", requestId);
     return 1;
 }
 
-int main(void) {
+int main(void)
+{
     int requestId = 101;
     int resultado = 1;
 
     MiddlewareHandler middlewares[2] = {
         autenticar,
-        logar
-    };
+        logar};
 
     printf("ID da requisicao: %d\n\n", requestId);
 
-    for (int i = 0; i < 2; i++) {
-        if (middlewares[i](requestId) == 0) {
+    for (int i = 0; i < 2; i++)
+    {
+        if (middlewares[i](requestId) == 0)
+        {
             resultado = 0;
             break;
         }
     }
 
-    if (resultado == 1) {
+    if (resultado == 1)
+    {
         printf("\nCadeia de middlewares executada com sucesso!\n");
-    } else {
+    }
+    else
+    {
         printf("\nFalha na execucao da cadeia de middlewares.\n");
     }
 
