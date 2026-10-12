@@ -48,4 +48,6 @@ int main()
     {
         printf("Acesso Normal");
     }
+
+    return 0;
 }

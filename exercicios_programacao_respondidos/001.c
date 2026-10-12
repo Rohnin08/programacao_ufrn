@@ -32,4 +32,6 @@ int main()
     {
         printf("%.1f\n", faturamentoSuavizado[i]);
     }
+
+    return 0;
 }
