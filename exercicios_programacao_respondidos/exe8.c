@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 void formatarTamanho(long tamanhoBytes)

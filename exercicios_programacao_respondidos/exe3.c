@@ -1,7 +1,7 @@
-
 #include <stdio.h>
 #include <string.h>
 
+// Separa os campos de uma linha CSV utilizando o ponto e vírgula
 void parsearLinhaCSV(char linha[])
 {
     char *campo;

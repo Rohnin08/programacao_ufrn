@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 typedef int (*MiddlewareHandler)(int requestId);

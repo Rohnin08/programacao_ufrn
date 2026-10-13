@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 long long calcularFaturamentoTotal(int quantidade, int precoUnitario)

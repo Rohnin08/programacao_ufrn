@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 void consolidarTotais(float vendasRegionais[3][4], float totaisAnuais[3])

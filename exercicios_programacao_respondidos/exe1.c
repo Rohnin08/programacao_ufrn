@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 void calcularMediaMovel(float original[5], float suavizado[5])
+/*Função que realiza a suavização de um vetor usando média movel*/
 {
-    suavizado[0] = original[0];
+    suavizado[0] = original[0]; 
     suavizado[4] = original[4];
 
     for (int i = 1; i < 4; i++)
@@ -14,20 +15,20 @@ void calcularMediaMovel(float original[5], float suavizado[5])
 int main()
 {
 
-    float faturamento[5] = {1200.0, 1800.0, 1500.0, 3000.0, 2100.0};
+    float faturamento[5] = {1200.0, 1800.0, 1500.0, 3000.0, 2100.0}; 
 
     float faturamentoSuavizado[5] = {};
 
-    calcularMediaMovel(faturamento, faturamentoSuavizado);
+    calcularMediaMovel(faturamento, faturamentoSuavizado); 
 
     printf("=== Faturamento Bruto ===\n");
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 5; i++) // Exibe o vetor do faturamento original
     {
         printf("%.1f\n", faturamento[i]);
     }
 
-    printf("=== Faturamento Suavizado ===\n");
+    printf("=== Faturamento Suavizado ===\n"); // Exibe o vetor do faturamento suavizado
     for (int i = 0; i < 5; i++)
     {
         printf("%.1f\n", faturamentoSuavizado[i]);
