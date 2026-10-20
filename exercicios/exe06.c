@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 
 	int opcao, a, b, resultado;
 
@@ -15,47 +16,47 @@ int main() {
 
 	printf("Digite o segundo numero: ");
 	scanf("%d", &b);
-	
+
 	printf("Digite a operacao: ");
 	scanf("%d", &opcao);
 
-	if ((a < 0) || (b < 0)) {
+	if ((a < 0) || (b < 0))
+	{
 		printf("Os valores precisam ser positivos");
 		return 0;
 	}
 
+	switch (opcao)
+	{
 
-	switch(opcao) {
+	case 1:
+		resultado = a & b;
+		printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+		break;
 
-		case 1:
-			resultado = a & b;
-			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
-			break;
+	case 2:
+		resultado = a | b;
+		printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+		break;
 
-		case 2:
-			resultado = a | b;
-			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
-			break;
+	case 3:
+		resultado = a ^ b;
+		printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+		break;
 
-		case 3:
-			resultado = a ^ b;
-			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
-			break;
+	case 4:
+		resultado = a << b;
+		printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+		break;
 
-		case 4:
-			resultado = a << b;
-			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
-			break;
+	case 5:
+		resultado = a >> b;
+		printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
+		break;
 
-		case 5:
-			resultado = a >> b;
-			printf("%d em decimal. %x em hexadecimal\n", resultado, resultado);
-			break
-
-		default:
-			printf("Opcao invalida");
-			break
-
+	default:
+		printf("Opcao invalida");
+		break;
 	}
 
 	return 0;
